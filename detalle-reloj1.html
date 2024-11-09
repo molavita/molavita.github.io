@@ -4,26 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reloj Clásico - Detalles</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace a tus estilos generales -->
+    <style>
+        /* Estilos básicos para darle una apariencia elegante a la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .product-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+        .product-price {
+            font-size: 24px;
+            color: #e63946;
+            margin: 15px 0;
+        }
+        .product-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+            margin: 20px 0;
+        }
+        .buy-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .buy-button:hover {
+            background-color: #e63946;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-button:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Reloj Clásico</h1>
-    </header>
 
-    <main class="container">
-        <div class="product-detail">
-            <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Reloj Clásico" class="product-image">
-            <div class="product-info">
-                <h2>Descripción del Producto</h2>
-                <p>Este reloj clásico cuenta con una correa de cuero genuino y un movimiento de cuarzo de alta precisión. Ideal para cualquier ocasión.</p>
-                <h3>Precio: $120</h3>
-                <a href="https://www.enlace-compra.com" class="buy-button">Comprar Ahora</a>
-            </div>
-    </main>
+    <div class="container">
+        <!-- Imagen del Producto -->
+        <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Reloj Clásico" class="product-image">
 
-    <footer>
-        <p>&copy; 2024 Relojes MTM</p>
-    </footer>
+        <!-- Título y Detalles del Producto -->
+        <h1 class="product-title">Reloj Clásico</h1>
+        <p class="product-price">$120</p>
+        <p class="product-description">Este reloj clásico cuenta con una correa de cuero genuino y un movimiento de cuarzo de alta precisión. Ideal para cualquier ocasión, este diseño elegante y atemporal es perfecto tanto para eventos formales como para el día a día.</p>
+        
+        <!-- Botón de Comprar -->
+        <a href="https://www.enlace-compra.com" class="buy-button">Comprar Ahora</a>
+
+        <!-- Botón de Volver -->
+        <div>
+            <a href="index.html" class="back-button">Volver a la tienda</a>
+        </div>
+    </div>
+
 </body>
 </html>
