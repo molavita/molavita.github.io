@@ -30,25 +30,28 @@
 
 /* Estilos del carrusel */
 .carousel-container {
-    position: relative; /* Añadido para que las flechas puedan posicionarse bien */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: hidden; /* Asegura que solo se vea una imagen a la vez */
     width: 100%;
+    max-width: 100%; /* Para evitar que el contenedor se amplíe más de lo necesario */
 }
 
 .carousel-items {
     display: flex;
-    transition: transform 0.3s ease-in-out; /* Para animar el deslizamiento */
+    transition: transform 0.3s ease-in-out; /* Animación para el deslizamiento */
+    width: 300%; /* Esto depende de cuántas imágenes tengas, por ejemplo, 3 imágenes = 300% */
 }
 
 .carousel img {
-    max-width: 100%;
+    width: 100%;  /* Asegura que cada imagen ocupe el 100% del contenedor */
     height: auto;
-    flex-shrink: 0; /* Evitar que las imágenes se reduzcan */
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan más de lo necesario */
 }
 
+/* Botones de navegación */
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -60,15 +63,15 @@
     cursor: pointer;
     font-size: 24px;
     border-radius: 5px;
-    z-index: 10; /* Asegura que las flechas estén por encima de las imágenes */
+    z-index: 10;
 }
 
 .carousel-button.left {
-    left: 10px; /* Puedes ajustar este valor según el espaciado deseado */
+    left: 10px;
 }
 
 .carousel-button.right {
-    right: 10px; /* Puedes ajustar este valor también */
+    right: 10px;
 }
 
 /* Estilos de texto */
@@ -92,7 +95,6 @@
     margin: 20px 0;
 }
 
-/* Estilos del botón de compra */
 .buy-button {
     display: inline-block;
     padding: 12px 30px;
@@ -110,7 +112,6 @@
     background-color: #e63946;
 }
 
-/* Botón de regreso */
 .back-button {
     display: block;
     margin-top: 20px;
