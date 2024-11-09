@@ -6,7 +6,7 @@
     <title>Detalles del Reloj Clásico</title>
     <style>
         /* Estilos generales */
-        body {
+body {
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
@@ -19,7 +19,7 @@
 
         .carousel-container {
             position: relative;
-            max-width: 600px;
+            max-width: 600px; /* Ajusta el tamaño máximo del carrusel */
             width: 100%;
             overflow: hidden;
             margin-bottom: 20px; /* Para separar el carrusel del texto */
@@ -29,9 +29,11 @@
         .carousel-image {
             display: none;
             width: 100%;
+            height: auto; /* Esto asegura que las imágenes mantengan su proporción */
             border-radius: 10px;
-            object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+            object-fit: contain; /* Asegura que la imagen no se deforme */
         }
+
         .carousel-image.active {
             display: block;
         }
@@ -57,7 +59,9 @@
         .carousel-button.right {
             right: 10px;
         }
-         .text-container {
+
+        /* Estilo para el texto y el contenedor */
+        .text-container {
             text-align: center; /* Centra el texto */
         }
 
@@ -69,65 +73,6 @@
         .text-container p {
             font-size: 1.2em;
             margin-bottom: 15px;
-        }
-
-        /* Estilos de la imagen */
-        .product-image {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        /* Estilos de texto */
-        .product-title {
-            font-size: 2rem;
-            color: #333;
-            margin: 10px 0;
-        }
-
-        .product-price {
-            font-size: 1.5rem;
-            color: #e63946;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        .product-description {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.6;
-            margin: 20px 0;
-        }
-
-        /* Estilos del botón de compra */
-        .buy-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #333;
-            color: #fff;
-            border-radius: 5px;
-            font-size: 1rem;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            margin-top: 20px;
-        }
-
-        .buy-button:hover {
-            background-color: #e63946;
-        }
-
-        /* Botón de regreso */
-        .back-button {
-            display: block;
-            margin-top: 20px;
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .back-button:hover {
-            color: #e63946;
         }
     </style>
 </head>
