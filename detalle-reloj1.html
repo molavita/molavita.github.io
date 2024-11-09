@@ -3,72 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reloj Clásico - Detalles</title>
+    <title>Detalles del Reloj Clásico</title>
     <style>
-        /* Estilos básicos para darle una apariencia elegante a la página */
+        /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f9;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f8f8f8;
         }
+
         .container {
             max-width: 800px;
-            padding: 20px;
+            width: 90%;
             background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+
+        /* Estilos de la imagen */
         .product-image {
             max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
+
+        /* Estilos de texto */
         .product-title {
-            font-size: 28px;
-            font-weight: bold;
+            font-size: 2rem;
             color: #333;
-            margin-top: 20px;
+            margin: 10px 0;
         }
+
         .product-price {
-            font-size: 24px;
+            font-size: 1.5rem;
             color: #e63946;
-            margin: 15px 0;
+            font-weight: bold;
+            margin: 10px 0;
         }
+
         .product-description {
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 1rem;
             color: #666;
+            line-height: 1.6;
             margin: 20px 0;
         }
+
+        /* Estilos del botón de compra */
         .buy-button {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 12px 30px;
             background-color: #333;
             color: #fff;
-            border-radius: 4px;
+            border-radius: 5px;
+            font-size: 1rem;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
+            margin-top: 20px;
         }
+
         .buy-button:hover {
             background-color: #e63946;
         }
+
+        /* Botón de regreso */
         .back-button {
-            display: inline-block;
+            display: block;
             margin-top: 20px;
             color: #333;
             text-decoration: none;
             font-weight: bold;
         }
+
         .back-button:hover {
-            text-decoration: underline;
+            color: #e63946;
         }
     </style>
 </head>
@@ -81,15 +96,16 @@
         <!-- Título y Detalles del Producto -->
         <h1 class="product-title">Reloj Clásico</h1>
         <p class="product-price">$120</p>
-        <p class="product-description">Este reloj clásico cuenta con una correa de cuero genuino y un movimiento de cuarzo de alta precisión. Ideal para cualquier ocasión, este diseño elegante y atemporal es perfecto tanto para eventos formales como para el día a día.</p>
-        
+        <p class="product-description">
+            Descubre el estilo atemporal del Reloj Clásico, perfecto para cualquier ocasión. Con una correa de cuero genuino y un movimiento de cuarzo de alta precisión, 
+            este reloj no solo marca el tiempo, sino también la elegancia. Su diseño combina tradición y modernidad, adaptándose tanto a eventos formales como al uso diario.
+        </p>
+
         <!-- Botón de Comprar -->
         <a href="https://www.enlace-compra.com" class="buy-button">Comprar Ahora</a>
 
         <!-- Botón de Volver -->
-        <div>
-            <a href="index.html" class="back-button">Volver a la tienda</a>
-        </div>
+        <a href="index.html" class="back-button">Volver a la tienda</a>
     </div>
 
 </body>
