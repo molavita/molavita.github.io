@@ -13,9 +13,9 @@
     padding: 0;
     background-color: #f4f4f9;
     display: flex;
-    justify-content: center;  /* Centra el contenido horizontalmente */
-    align-items: center;  /* Centra el contenido verticalmente */
-    min-height: 100vh;  /* Asegura que el body tenga la altura completa */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
@@ -26,22 +26,18 @@
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    display: flex;
-    flex-direction: column;  /* Asegura que los elementos estén apilados */
-    justify-content: center;  /* Centra los elementos dentro de .container */
-    align-items: center;  /* Centra los elementos horizontalmente */
 }
 
 /* Estilos del carrusel */
 .carousel-container {
     position: relative;
-    max-width: 40%;  /* Ajusta el tamaño del carrusel */
+    max-width: 50%;
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 20px;
-    display: flex;  /* Asegura que los elementos internos estén alineados */
-    justify-content: center;  /* Centra las imágenes horizontalmente */
-    align-items: center;  /* Centra las imágenes verticalmente si es necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-images {
@@ -50,7 +46,7 @@
 }
 
 .carousel-images img {
-    width: 100%;  /* Asegura que cada imagen ocupe el 100% del contenedor */
+    width: 100%;
     border-radius: 10px;
     flex-shrink: 0;
 }
@@ -76,6 +72,26 @@
 
 .carousel-button.right {
     right: 10px;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .carousel-container {
+        max-width: 90%; /* Ajusta el tamaño del carrusel */
+    }
+
+    .carousel-button {
+        padding: 10px;
+        font-size: 20px; /* Reduce el tamaño de las flechas */
+    }
+
+    .carousel-button.left {
+        left: 5px; /* Mueve las flechas hacia el borde en dispositivos pequeños */
+    }
+
+    .carousel-button.right {
+        right: 5px; /* Mueve las flechas hacia el borde en dispositivos pequeños */
+    }
 }
 
 /* Estilos de texto */
