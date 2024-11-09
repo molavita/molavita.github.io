@@ -38,7 +38,7 @@
 
         .carousel-items {
             display: flex;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.5s ease-in-out;
         }
 
         .carousel img {
@@ -146,16 +146,14 @@
 
         <!-- Botón de Volver -->
         <a href="index.html" class="back-button">Volver a la tienda</a>
-    </div>
-
     <script>
         let currentIndex = 0;
-        const images = document.querySelectorAll(".carousel img");
-        const totalImages = images.length;
+        const carouselItems = document.querySelector(".carousel-items");
+        const totalImages = document.querySelectorAll(".carousel-items img").length;
 
         function updateCarousel() {
             const offset = -currentIndex * 100;
-            document.querySelector(".carousel-items").style.transform = `translateX(${offset}%)`;
+            carouselItems.style.transform = `translateX(${offset}%)`;
         }
 
         function nextImage() {
