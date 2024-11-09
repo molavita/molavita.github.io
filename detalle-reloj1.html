@@ -6,39 +6,47 @@
     <title>Detalles del Reloj Clásico</title>
     <style>
         /* Estilos generales */
-body {
+        body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f4f4f9;
-            margin: 0;
-            flex-direction: column; /* Asegura que el contenido se apile verticalmente */
         }
 
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Estilos del carrusel */
         .carousel-container {
             position: relative;
-            max-width: 600px; /* Ajusta el tamaño máximo del carrusel */
             width: 100%;
+            max-width: 100%;
             overflow: hidden;
-            margin-bottom: 20px; /* Para separar el carrusel del texto */
+            margin-bottom: 20px;
         }
 
-        /* Estilo de las imágenes del carrusel */
         .carousel-image {
             display: none;
             width: 100%;
-            height: auto; /* Esto asegura que las imágenes mantengan su proporción */
             border-radius: 10px;
-            object-fit: contain; /* Asegura que la imagen no se deforme */
+            object-fit: cover;
         }
 
         .carousel-image.active {
             display: block;
         }
 
-        /* Botones de navegación */
         .carousel-button {
             position: absolute;
             top: 50%;
@@ -46,9 +54,9 @@ body {
             background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
             border: none;
-            padding: 10px;
+            padding: 12px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 24px;
             border-radius: 5px;
         }
 
@@ -60,34 +68,72 @@ body {
             right: 10px;
         }
 
-        /* Estilo para el texto y el contenedor */
-        .text-container {
-            text-align: center; /* Centra el texto */
+        /* Estilos de texto */
+        .product-title {
+            font-size: 2rem;
+            color: #333;
+            margin: 10px 0;
         }
 
-        .text-container h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
+        .product-price {
+            font-size: 1.5rem;
+            color: #e63946;
+            font-weight: bold;
+            margin: 10px 0;
         }
 
-        .text-container p {
-            font-size: 1.2em;
-            margin-bottom: 15px;
+        .product-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        /* Estilos del botón de compra */
+        .buy-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .buy-button:hover {
+            background-color: #e63946;
+        }
+
+        /* Botón de regreso */
+        .back-button {
+            display: block;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            color: #e63946;
         }
     </style>
 </head>
 <body>
 
-    <div class="carousel-container">
-        <!-- Imágenes del carrusel -->
-        <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" class="carousel-image active" alt="Reloj Frederique Constant - Imagen 1">
-        <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" class="carousel-image" alt="Reloj Frederique Constant - Imagen 2">
-        <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" class="carousel-image" alt="Reloj Frederique Constant - Imagen 3">
+    <div class="container">
+        <!-- Carrusel de imágenes -->
+        <div class="carousel-container">
+            <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Reloj Clásico 1" class="carousel-image active">
+            <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Reloj Clásico 2" class="carousel-image">
+            <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Reloj Clásico 3" class="carousel-image">
 
-        <!-- Botones de navegación -->
-        <button class="carousel-button left" onclick="prevImage()">&#10094;</button>
-        <button class="carousel-button right" onclick="nextImage()">&#10095;</button>
-    </div>
+            <!-- Botones de navegación -->
+            <button class="carousel-button left" onclick="prevImage()">&#10094;</button>
+            <button class="carousel-button right" onclick="nextImage()">&#10095;</button>
+        </div>
 
         <!-- Título y Detalles del Producto -->
         <h1 class="product-title">Reloj Edición Limitada</h1>
@@ -97,11 +143,8 @@ body {
         </p>
 
         <!-- Botón de Comprar -->
-        <a href="https://frederiqueconstant.com/es/" class="buy-button">Comprar Ahora</a>
+        <a href="https://www.enlace-compra.com" class="buy-button">Comprar Ahora</a>
 
         <!-- Botón de Volver -->
         <a href="index.html" class="back-button">Volver a la tienda</a>
     </div>
-
-</body>
-</html>
