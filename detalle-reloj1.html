@@ -89,9 +89,16 @@
 </head>
 <body>
 
-    <div class="container">
-        <!-- Imagen del Producto -->
-        <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Reloj Clásico" class="product-image">
+    <div class="carousel-container">
+        <!-- Imágenes del carrusel -->
+        <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" class="carousel-image active" alt="Reloj Frederique Constant - Imagen 1">
+        <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" class="carousel-image" alt="Reloj Frederique Constant - Imagen 2">
+        <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" class="carousel-image" alt="Reloj Frederique Constant - Imagen 3">
+
+        <!-- Botones de navegación -->
+        <button class="carousel-button left" onclick="prevImage()">&#10094;</button>
+        <button class="carousel-button right" onclick="nextImage()">&#10095;</button>
+    </div>
 
         <!-- Título y Detalles del Producto -->
         <h1 class="product-title">Reloj Edición Limitada</h1>
