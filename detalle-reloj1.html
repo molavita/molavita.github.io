@@ -8,131 +8,120 @@
     <style>
         /* Estilos generales */
        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-        .container {
-            max-width: 800px;
-            width: 90%;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+.container {
+    max-width: 800px;
+    width: 90%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
-         /* Estilos del carrusel */
-         .carousel-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            width: 100%;
-        }
+/* Estilos del carrusel */
+.carousel-container {
+    position: relative; /* Añadido para que las flechas puedan posicionarse bien */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
 
-         .carousel img {
-            max-width: 100%;
-            height: auto;
+.carousel-items {
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* Para animar el deslizamiento */
+}
 
-        }
+.carousel img {
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0; /* Evitar que las imágenes se reduzcan */
+}
 
-        .carousel-items {
-            display: flex;
-            justify-content: center;  /* Centra los elementos horizontalmente */
-            align-items: center;      /* Centra los elementos verticalmente */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+    z-index: 10; /* Asegura que las flechas estén por encima de las imágenes */
+}
 
-        }
-        
-        .carousel img {
-            margin: 0;
-            padding: 0;
-        
-        }
+.carousel-button.left {
+    left: 10px; /* Puedes ajustar este valor según el espaciado deseado */
+}
 
+.carousel-button.right {
+    right: 10px; /* Puedes ajustar este valor también */
+}
 
-        .carousel-image.active {
-            display: block;
-        }
+/* Estilos de texto */
+.product-title {
+    font-size: 2rem;
+    color: #333;
+    margin: 10px 0;
+}
 
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: none;
-            padding: 12px;
-            cursor: pointer;
-            font-size: 24px;
-            border-radius: 5px;
-        }
+.product-price {
+    font-size: 1.5rem;
+    color: #e63946;
+    font-weight: bold;
+    margin: 10px 0;
+}
 
-        .carousel-button.left {
-            left: 10px;
-        }
+.product-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 20px 0;
+}
 
-        .carousel-button.right {
-            right: 10px;
-        }
+/* Estilos del botón de compra */
+.buy-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
 
-        /* Estilos de texto */
-        .product-title {
-            font-size: 2rem;
-            color: #333;
-            margin: 10px 0;
-        }
+.buy-button:hover {
+    background-color: #e63946;
+}
 
-        .product-price {
-            font-size: 1.5rem;
-            color: #e63946;
-            font-weight: bold;
-            margin: 10px 0;
-        }
+/* Botón de regreso */
+.back-button {
+    display: block;
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .product-description {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.6;
-            margin: 20px 0;
-        }
-
-        /* Estilos del botón de compra */
-        .buy-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #333;
-            color: #fff;
-            border-radius: 5px;
-            font-size: 1rem;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            margin-top: 20px;
-        }
-
-        .buy-button:hover {
-            background-color: #e63946;
-        }
-
-        /* Botón de regreso */
-        .back-button {
-            display: block;
-            margin-top: 20px;
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .back-button:hover {
-            color: #e63946;
-        }
+.back-button:hover {
+    color: #e63946;
+}
     </style>
 </head>
 <body>
