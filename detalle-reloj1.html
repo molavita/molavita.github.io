@@ -33,6 +33,29 @@
 }
 
 /* Estilos del carrusel */
+.carousel-container {
+    position: relative;
+    max-width: 80%;  /* Ajusta el tamaño del carrusel */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;  /* Asegura que los elementos internos estén alineados */
+    justify-content: center;  /* Centra las imágenes horizontalmente */
+    align-items: center;  /* Centra las imágenes verticalmente si es necesario */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;  /* Asegura que cada imagen ocupe el 100% del contenedor */
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* Botones de navegación */
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -48,11 +71,12 @@
 }
 
 .carousel-button.left {
-    left: -5px;
+    left: 10px;
 }
 
 .carousel-button.right {
-    right: -5px;
+    right: 10px;
+}
 
 /* Estilos de texto */
 .product-title {
@@ -103,9 +127,6 @@
 .back-button:hover {
     color: #e63946;
 }
-    </style>
-</head>
-<body>
 
 
 <div class="container">
