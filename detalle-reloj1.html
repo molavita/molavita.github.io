@@ -129,38 +129,113 @@
 }
 
         /* Ajustes para pantallas móviles */
-        @media (max-width: 768px) {
-            .carousel-container {
-                width: 100%; /* Asegura que ocupe todo el ancho disponible */
-                padding-left: 20px;  /* Añadimos algo de padding para evitar que las flechas se toquen con los bordes */
-                padding-right: 20px; /* Añadimos algo de padding para evitar que las flechas se toquen con los bordes */
-            }
+         .container {
+            max-width: 800px;
+            width: 90%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-            .carousel-images img {
-                width: 100%; /* Asegura que las imágenes se ajusten al ancho del carrusel */
-                margin: 0 auto; /* Centra la imagen */
-            }
+        /* Estilos del carrusel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center; /* Centra el carrusel */
+        }
 
-            .carousel-button {
-                font-size: 20px; /* Ajusta el tamaño de las flechas */
-                padding: 12px; /* Asegura que el padding sea adecuado */
-                z-index: 15; /* Asegura que las flechas estén por encima de la imagen */
-            }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
 
-            .carousel-button.left {
-                left: 10px;
-            }
+        .carousel-images img {
+            width: 100%;  /* Asegura que cada imagen ocupe el 100% del contenedor */
+            height: auto;
+            flex-shrink: 0;
+            object-fit: contain; /* Mantiene la proporción de las imágenes */
+            border-radius: 10px;
+        }
 
-            .carousel-button.right {
-                right: 10px;
-            }
+        /* Botones de navegación */
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 5px;
+            z-index: 10;
+        }
 
-            .product-title {
-                font-size: 1.5rem; /* Ajusta el tamaño del título en móvil */
-            }
+        .carousel-button.left {
+            left: 10px;
+        }
 
-            .product-price {
-                font-size: 1.2rem; /* Ajusta el tamaño del precio en móvil */
+        .carousel-button.right {
+            right: 10px;
+        }
+
+        /* Estilos de texto */
+        .product-title {
+            font-size: 2rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            color: #e63946;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .product-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .buy-button:hover {
+            background-color: #e63946;
+        }
+
+        .back-button {
+            display: block;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            color: #e63946;
+        }
             }
         }
     </style>
