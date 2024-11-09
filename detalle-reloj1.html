@@ -8,23 +8,67 @@
         /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+            flex-direction: column; /* Asegura que el contenido se apile verticalmente */
         }
 
-        .container {
-            max-width: 800px;
-            width: 90%;
-            background-color: #fff;
-            padding: 20px;
+        .carousel-container {
+            position: relative;
+            max-width: 600px;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 20px; /* Para separar el carrusel del texto */
+        }
+
+        /* Estilo de las imágenes del carrusel */
+        .carousel-image {
+            display: none;
+            width: 100%;
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+        }
+        .carousel-image.active {
+            display: block;
+        }
+
+        /* Botones de navegación */
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .carousel-button.left {
+            left: 10px;
+        }
+
+        .carousel-button.right {
+            right: 10px;
+        }
+         .text-container {
+            text-align: center; /* Centra el texto */
+        }
+
+        .text-container h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .text-container p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
         }
 
         /* Estilos de la imagen */
@@ -84,43 +128,6 @@
 
         .back-button:hover {
             color: #e63946;
-        }
-        .carousel-container {
-            position: relative;
-            max-width: 600px;
-            width: 100%;
-        }
-
-        /* Estilo de las imágenes del carrusel */
-        .carousel-image {
-            display: none;
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .carousel-image.active {
-            display: block;
-        }
-        /* Botones de navegación */
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 5px;
-        }
-
-        .carousel-button.left {
-            left: 10px;
-        }
-
-        .carousel-button.right {
-            right: 10px;
         }
     </style>
 </head>
