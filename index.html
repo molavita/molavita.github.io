@@ -15,86 +15,119 @@
 
        body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            color: #333;
         }
 
-        .container {
-            max-width: 800px;
-            width: 90%;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        /* Encabezado */
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 1.5rem 0;
             text-align: center;
         }
 
-        /* Estilos de la imagen */
-        .product-image {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-bottom: 20px;
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
 
-        /* Estilos de texto */
+        header p {
+            font-size: 1rem;
+            color: #aaa;
+        }
+
+        /* Estilo del contenedor principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        /* Diseño de los productos */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Tarjeta de cada producto */
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-details {
+            padding: 1rem;
+            text-align: center;
+        }
+
         .product-title {
-            font-size: 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
             color: #333;
-            margin: 10px 0;
+            margin-bottom: 0.5rem;
         }
 
         .product-price {
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: #e63946;
-            font-weight: bold;
-            margin: 10px 0;
+            margin-bottom: 0.5rem;
         }
 
         .product-description {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.6;
-            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1rem;
         }
 
-        /* Estilos del botón de compra */
         .buy-button {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 0.7rem 1.5rem;
             background-color: #333;
             color: #fff;
-            border-radius: 5px;
-            font-size: 1rem;
+            border-radius: 4px;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.3s;
-            margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
 
         .buy-button:hover {
             background-color: #e63946;
         }
 
-        /* Botón de regreso */
-        .back-button {
-            display: block;
-            margin-top: 20px;
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
         }
 
-        .back-button:hover {
-            color: #e63946;
+        footer p {
+            font-size: 0.9rem;
+            color: #aaa;
         }
     </style>
 </head>
 <body>
+
 
     <!-- Encabezado -->
     <header>
