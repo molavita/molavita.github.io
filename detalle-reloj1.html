@@ -7,23 +7,34 @@
     <title>Detalles del Reloj Edición Limitada</title>
     <style>
         /* Estilos generales */
-       body {
+        body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
-            background-color: #f4f4f9;
         }
 
-        .carousel-container {
-            position: relative;
-            max-width: 500px;
+        .container {
+            max-width: 800px;
             width: 90%;
-            overflow: hidden;
+            background-color: #fff;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Estilos del carrusel */
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         .carousel-images {
@@ -59,37 +70,89 @@
         .carousel-button.right {
             right: 10px;
         }
+
+        /* Estilos de texto */
+        .product-title {
+            font-size: 2rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            color: #e63946;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .product-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .buy-button:hover {
+            background-color: #e63946;
+        }
+
+        .back-button {
+            display: block;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            color: #e63946;
+        }
     </style>
 </head>
 <body>
 
-<div class="carousel-container">
-    <!-- Contenedor de imágenes del carrusel -->
-    <div class="carousel-images" id="carouselImages">
-        <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Imagen 1">
-        <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Imagen 2">
-        <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Imagen 3">
+<div class="container">
+    <!-- Carrusel de imágenes -->
+    <div class="carousel-container">
+        <div class="carousel-images" id="carouselImages">
+            <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Imagen 1">
+            <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Imagen 2">
+            <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Imagen 3">
+        </div>
+        
+        <!-- Botones de navegación -->
+        <button class="carousel-button left" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-button right" onclick="moveSlide(1)">&#10095;</button>
     </div>
-    <!-- Botones de navegación -->
-    <button class="carousel-button left" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="carousel-button right" onclick="moveSlide(1)">&#10095;</button>
+
+    <!-- Título y Detalles del Producto -->
+    <h1 class="product-title">Reloj Edición Limitada</h1>
+    <p class="product-price">1.995,00 €</p>
+    <p class="product-description">
+        El Frederique Constant Runabout Edición Limitada es un reloj sofisticado y exclusivo, inspirado en la elegancia de los yates Runabout clásicos. Esta pieza de colección combina tradición relojera suiza con un diseño náutico distintivo, destacándose por su caja de acero inoxidable, esfera detallada y movimiento automático visible a través del fondo de cristal. Limitado a una cantidad exclusiva de unidades, cada reloj está numerado individualmente, lo que refuerza su valor como una joya única y atemporal para los entusiastas de la alta relojería.
+    </p>
+
+    <!-- Botón de Comprar -->
+    <a href="https://frederiqueconstant.com/es/" class="buy-button">Comprar Ahora</a>
+
+    <!-- Botón de Volver -->
+    <a href="index.html" class="back-button">Volver a la tienda</a>
 </div>
 
-        <!-- Título y Detalles del Producto -->
-        <h1 class="product-title">Reloj Edición Limitada</h1>
-        <p class="product-price">1.995,00 €</p>
-        <p class="product-description">
-            El Frederique Constant Runabout Edición Limitada es un reloj sofisticado y exclusivo, inspirado en la elegancia de los yates Runabout clásicos. Esta pieza de colección combina tradición relojera suiza con un diseño náutico distintivo, destacándose por su caja de acero inoxidable, esfera detallada y movimiento automático visible a través del fondo de cristal. Limitado a una cantidad exclusiva de unidades, cada reloj está numerado individualmente, lo que refuerza su valor como una joya única y atemporal para los entusiastas de la alta relojería.
-        </p>
-
-        <!-- Botón de Comprar -->
-        <a href="https://frederiqueconstant.com/es/" class="buy-button">Comprar Ahora</a>
-
-        <!-- Botón de Volver -->
-        <a href="index.html" class="back-button">Volver a la tienda</a>
-    </div>
-
-    <script>
+<script>
     let currentIndex = 0;
 
     function moveSlide(direction) {
@@ -100,6 +163,10 @@
         images.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
