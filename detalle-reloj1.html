@@ -19,22 +19,27 @@
         }
 
         .container {
-            max-width: 800px;
-            width: 90%;
+            max-width: 50px;
+            width: 50%;
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
+            display: flex;  /* Cambiar a flexbox */
+            flex-direction: column; /* Apilar los elementos de arriba hacia abajo */
+            justify-content: center;  /* Centra el contenido verticalmente */
+            align-items: center;  /* Centra el contenido horizontalmente */
         }
 
         /* Estilos del carrusel */
         .carousel-container {
             position: relative;
-            max-width: 50%;
-            overflow: hidden;
+            width: 50%; /* Esto asegura que el carrusel ocupe el 100% de su contenedor */
+            max-width: 50px; /* Ajusta el tamaño del carrusel */
+            margin: 0 auto;  /* Centra el carrusel dentro del contenedor */
+            overflow: hidden;  /* Asegura que solo se vea una imagen a la vez */
             border-radius: 10px;
-            margin-bottom: 20px;
         }
 
         .carousel-images {
