@@ -1,140 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <href="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/reloj.png">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/reloj.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles del Reloj Edición Limitada</title>
     <style>
         /* Estilos generales */
-         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-        .container {
-            max-width: 800px;
-            width: 90%;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+.container {
+    max-width: 800px;
+    width: 90%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
-        /* Estilos del carrusel */
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            max-width: 100%;
-        }
+/* Estilos del carrusel */
+.carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Asegura que solo se vea una imagen a la vez */
+    width: 100%;
+    max-width: 100%; /* Para evitar que el contenedor se amplíe más de lo necesario */
+}
 
-        .carousel-items {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
+.carousel-items {
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* Animación para el deslizamiento */
+    width: 300%; /* Esto depende de cuántas imágenes tengas, por ejemplo, 3 imágenes = 300% */
+}
 
-        .carousel img {
-            width: 100%;
-            height: auto;
-            flex-shrink: 0;
-        }
+.carousel img {
+    width: 100%;  /* Asegura que cada imagen ocupe el 100% del contenedor */
+    height: auto;
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan más de lo necesario */
+}
 
-        /* Botones de navegación */
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: none;
-            padding: 12px;
-            cursor: pointer;
-            font-size: 24px;
-            border-radius: 5px;
-            z-index: 10;
-        }
+/* Botones de navegación */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+    z-index: 10;
+}
 
-        .carousel-button.left {
-            left: 10px;
-        }
+.carousel-button.left {
+    left: 10px;
+}
 
-        .carousel-button.right {
-            right: 10px;
-        }
+.carousel-button.right {
+    right: 10px;
+}
 
-        /* Estilos de texto */
-        .product-title {
-            font-size: 2rem;
-            color: #333;
-            margin: 10px 0;
-        }
+/* Estilos de texto */
+.product-title {
+    font-size: 2rem;
+    color: #333;
+    margin: 10px 0;
+}
 
-        .product-price {
-            font-size: 1.5rem;
-            color: #e63946;
-            font-weight: bold;
-            margin: 10px 0;
-        }
+.product-price {
+    font-size: 1.5rem;
+    color: #e63946;
+    font-weight: bold;
+    margin: 10px 0;
+}
 
-        .product-description {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.6;
-            margin: 20px 0;
-        }
+.product-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 20px 0;
+}
 
-        .buy-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #333;
-            color: #fff;
-            border-radius: 5px;
-            font-size: 1rem;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            margin-top: 20px;
-        }
+.buy-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
 
-        .buy-button:hover {
-            background-color: #e63946;
-        }
+.buy-button:hover {
+    background-color: #e63946;
+}
 
-        .back-button {
-            display: block;
-            margin-top: 20px;
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.back-button {
+    display: block;
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .back-button:hover {
-            color: #e63946;
-        }
+.back-button:hover {
+    color: #e63946;
+}
     </style>
 </head>
 <body>
+
     <div class="container">
-        <!-- Carrusel -->
+        <!-- Carrusel de imágenes -->
         <div class="carousel-container">
-            <div class="carousel-items">
-                <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Imagen 1">
-                <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Imagen 2">
-                <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Imagen 3">
-            </div>
+            <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique%20(1).png" alt="Reloj Clásico 1" class="carousel-image active">
+
+            <!-- Botones de navegación -->
             <button class="carousel-button left" onclick="prevImage()">&#10094;</button>
             <button class="carousel-button right" onclick="nextImage()">&#10095;</button>
         </div>
 
-        <!-- Información del producto -->
+        <!-- Título y Detalles del Producto -->
         <h1 class="product-title">Reloj Edición Limitada</h1>
         <p class="product-price">1.995,00 €</p>
         <p class="product-description">
@@ -146,25 +149,4 @@
 
         <!-- Botón de Volver -->
         <a href="index.html" class="back-button">Volver a la tienda</a>
-    <script>
-        let currentIndex = 0;
-        const carouselItems = document.querySelector(".carousel-items");
-        const totalImages = document.querySelectorAll(".carousel-items img").length;
-
-        function updateCarousel() {
-            const offset = -currentIndex * 100;
-            carouselItems.style.transform = `translateX(${offset}%)`;
-        }
-
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % totalImages;
-            updateCarousel();
-        }
-
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            updateCarousel();
-        }
-    </script>
-</body>
-</html>
+    </div>
