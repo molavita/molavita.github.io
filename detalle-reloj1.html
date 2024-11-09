@@ -31,25 +31,29 @@
         /* Estilos del carrusel */
         .carousel-container {
             position: relative;
-            max-width: 100%;
             width: 100%;
+            max-width: 100%;
             overflow: hidden;
             border-radius: 10px;
             margin-bottom: 20px;
             display: flex;
-            justify-content: center; /* Centra el contenido del carrusel */
+            justify-content: center; /* Centra el carrusel */
+            align-items: center; /* Asegura que las imágenes se alineen en el centro verticalmente */
         }
 
         .carousel-images {
             display: flex;
             transition: transform 0.5s ease;
+            width: 100%; /* Hace que el contenedor ocupe todo el ancho disponible */
         }
 
         .carousel-images img {
-            width: 100%;
+            width: 80%;  /* Ajusta el tamaño de la imagen */
             height: auto;
-            border-radius: 10px;
             flex-shrink: 0;
+            object-fit: cover; /* Asegura que las imágenes no se deformen */
+            border-radius: 10px;
+            margin: 0 auto;  /* Centra la imagen */
         }
 
         /* Botones de navegación */
@@ -128,12 +132,24 @@
         /* Ajustes para pantallas móviles */
         @media (max-width: 768px) {
             .carousel-container {
-                max-width: 90%; /* Ajusta el tamaño en pantallas móviles */
+                width: 90%; /* Ajusta el tamaño en pantallas móviles */
+            }
+
+            .carousel-images img {
+                width: 90%; /* Reduce el tamaño de la imagen en móvil */
             }
 
             .carousel-button {
                 font-size: 18px; /* Reduce el tamaño de las flechas */
                 padding: 8px; /* Ajusta el padding de las flechas */
+            }
+
+            .product-title {
+                font-size: 1.5rem; /* Ajusta el tamaño del título */
+            }
+
+            .product-price {
+                font-size: 1.2rem; /* Ajusta el tamaño del precio */
             }
         }
     </style>
