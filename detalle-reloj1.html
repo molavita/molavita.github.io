@@ -8,132 +8,122 @@
     <style>
         /* Estilos generales */
        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;  /* Centra el contenido horizontalmente */
-    align-items: center;  /* Centra el contenido verticalmente */
-    min-height: 100vh;
-    height: 100%;  /* Asegura que el body tenga el 100% de altura para el centrado */
-}
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-/* Contenedor principal */
-.container {
-    max-width: 800px;
-    width: 90%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;  /* Cambiar a flexbox */
-    flex-direction: column; /* Apilar los elementos de arriba hacia abajo */
-    justify-content: center;  /* Centra el contenido verticalmente */
-    align-items: center;  /* Centra el contenido horizontalmente */
-}
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-/* Estilos del carrusel */
-.carousel-container {
-    position: relative;
-    width: 100%; /* Esto asegura que el carrusel ocupe el 100% de su contenedor */
-    max-width: 600px; /* Ajusta el tamaño del carrusel */
-    margin: 0 auto;  /* Centra el carrusel dentro del contenedor */
-    overflow: hidden;  /* Asegura que solo se vea una imagen a la vez */
-    border-radius: 10px;
-}
+        /* Estilos del carrusel */
+        .carousel-container {
+            position: relative;
+            max-width: 50%;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
 
-/* Contenedor de las imágenes */
-.carousel-items {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    width: 300%; /* Asegura que se vea el carrusel de 3 imágenes */
-}
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
 
-/* Imagen del carrusel */
-.carousel img {
-    width: 100%;
-    height: auto;
-    flex-shrink: 0;
-}
+        .carousel-images img {
+            width: 100%;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
 
-/* Botones de navegación */
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 12px;
-    cursor: pointer;
-    font-size: 24px;
-    border-radius: 5px;
-    z-index: 10;
-}
+        /* Botones de navegación */
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 5px;
+            z-index: 10;
+        }
 
-.carousel-button.left {
-    left: 10px;
-}
+        .carousel-button.left {
+            left: 10px;
+        }
 
-.carousel-button.right {
-    right: 10px;
-}
+        .carousel-button.right {
+            right: 10px;
+        }
 
-/* Estilos de texto */
-.product-title {
-    font-size: 2rem;
-    color: #333;
-    margin: 10px 0;
-}
+        /* Estilos de texto */
+        .product-title {
+            font-size: 2rem;
+            color: #333;
+            margin: 10px 0;
+        }
 
-.product-price {
-    font-size: 1.5rem;
-    color: #e63946;
-    font-weight: bold;
-    margin: 10px 0;
-}
+        .product-price {
+            font-size: 1.5rem;
+            color: #e63946;
+            font-weight: bold;
+            margin: 10px 0;
+        }
 
-.product-description {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-    margin: 20px 0;
-}
+        .product-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
 
-.buy-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 1rem;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    margin-top: 20px;
-}
+        .buy-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
 
-.buy-button:hover {
-    background-color: #e63946;
-}
+        .buy-button:hover {
+            background-color: #e63946;
+        }
 
-.back-button {
-    display: block;
-    margin-top: 20px;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .back-button {
+            display: block;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.back-button:hover {
-    color: #e63946;
-
+        .back-button:hover {
+            color: #e63946;
         }
     </style>
 </head>
 <body>
+
 
 <div class="container">
     <!-- Carrusel de imágenes -->
