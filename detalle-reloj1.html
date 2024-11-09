@@ -85,6 +85,43 @@
         .back-button:hover {
             color: #e63946;
         }
+        .carousel-container {
+            position: relative;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /* Estilo de las imágenes del carrusel */
+        .carousel-image {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .carousel-image.active {
+            display: block;
+        }
+        /* Botones de navegación */
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .carousel-button.left {
+            left: 10px;
+        }
+
+        .carousel-button.right {
+            right: 10px;
+        }
     </style>
 </head>
 <body>
