@@ -38,6 +38,41 @@
             color: #aaa;
         }
 
+        /* Estilos para el menú */
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 0.8rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #e63946;
+        }
+
+        /* Responsive para móviles */
+        @media (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
         /* Estilo del contenedor principal */
         .container {
             width: 90%;
@@ -130,19 +165,29 @@
 </head>
 <body>
 
-
     <!-- Encabezado -->
     <header>
         <h1>Relojes MTM</h1>
         <p>Encuentra el reloj perfecto para cada ocasión.</p>
     </header>
 
+    <!-- Menú de navegación -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#edicion-limitada">Edición Limitada</a></li>
+            <li><a href="#deportivo">Deportivo</a></li>
+            <li><a href="#elegante">Elegante</a></li>
+            <li><a href="#lujo">De Lujo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
     <!-- Contenedor principal -->
     <div class="container">
         <!-- Lista de productos -->
         <div class="products">
             <!-- Reloj Edición Limitada -->
-            <div class="product-card">
+            <div id="edicion-limitada" class="product-card">
                 <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/frederique-constant.jpg');"></div>
                 <div class="product-details">
                     <h2 class="product-title">Reloj Edición Limitada</h2>
@@ -153,7 +198,7 @@
             </div>
 
             <!-- Reloj Deportivo -->
-            <div class="product-card">
+            <div id="deportivo" class="product-card">
                 <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/tag-heuer-5.png');"></div>
                 <div class="product-details">
                     <h2 class="product-title">Reloj Deportivo</h2>
@@ -164,7 +209,7 @@
             </div>
 
             <!-- Reloj Elegante -->
-            <div class="product-card">
+            <div id="elegante" class="product-card">
                 <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/rolex.png');"></div>
                 <div class="product-details">
                     <h2 class="product-title">Reloj Elegante</h2>
@@ -175,7 +220,7 @@
             </div>
 
             <!-- Reloj De Lujo -->
-            <div class="product-card">
+            <div id="lujo" class="product-card">
                 <div class="product-image" style="background-image: url('https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega1.png');"></div>
                 <div class="product-details">
                     <h2 class="product-title">Reloj De Lujo</h2>
@@ -188,7 +233,7 @@
     </div>
 
     <!-- Pie de página -->
-    <footer>
+    <footer id="contacto">
         <p><b>Dirección: P.º de la Castellana,81</b></p>
         <p><b>Telefono: 921-123-563</b></p>
         <p><b>Email: relojesmtm@info.com</b></p><br>
