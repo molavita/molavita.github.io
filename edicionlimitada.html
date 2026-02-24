@@ -4,25 +4,15 @@
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/reloj.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Detalles - Reloj Edición Limitada | MTM</title>
+    <title>Detalles del Reloj Edición Limitada</title>
     <style>
+        /* --- ESTILOS DEL ENCABEZADO Y MENÚ (Copiados de tu principal) --- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #121212;
-            color: #FAF3E0;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* --- ENCABEZADO Y MENÚ (Copiado de la principal) --- */
         header {
             background: linear-gradient(90deg, #bfa35a, #8c732d);
             color: #121212;
@@ -42,6 +32,7 @@
         header p {
             font-size: 1.25rem;
             font-style: italic;
+            font-weight: 400;
             color: #3b2e00;
         }
 
@@ -55,20 +46,20 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 2rem;
+            gap: 3rem;
             font-weight: 600;
             font-size: 1.1rem;
             font-family: 'Arial Black', Arial, sans-serif;
-            flex-wrap: wrap;
         }
 
-        .menu-title {
+        .menu p {
             color: #bfa35a;
+            align-self: center;
             font-size: 1.3rem;
             font-weight: 700;
             letter-spacing: 0.05em;
             margin-right: 1rem;
+            user-select: none;
         }
 
         .menu a {
@@ -83,26 +74,33 @@
             background-color: #bfa35a;
             color: #121212;
         }
-        
-        .container {
-            flex-grow: 1;
-            padding: 3rem 1rem;
+
+        /* --- TUS ESTILOS ORIGINALES DE ESTA PÁGINA --- */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #121212;
+            color: #FAF3E0;
+            line-height: 1.6;
+        }
+
+        /* Contenedor para mantener el margen que tenías en el body */
+        .main-wrapper {
+            padding: 2rem;
         }
 
         .content {
-            max-width: 800px;
+            max-width: 700px;
             background-color: #1e1e1e;
-            padding: 2.5rem;
+            padding: 2rem;
             margin: auto;
             border-radius: 10px;
-            border: 1px solid #bfa35a;
-            box-shadow: 0 0 25px rgba(191, 163, 90, 0.3);
+            box-shadow: 0 0 20px #bfa35aaa;
             text-align: center;
         }
 
-        .content h2 {
+        .content h1 {
             color: #bfa35a;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             font-family: 'Palatino Linotype', 'Book Antiqua', serif;
             font-weight: 700;
             font-size: 2.5rem;
@@ -110,12 +108,12 @@
 
         .content p {
             color: #ddd6bb;
-            font-size: 1.15rem;
-            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
             text-align: justify;
         }
 
-        .back-link {
+        a.back-link {
             display: inline-block;
             margin-top: 2rem;
             font-weight: 700;
@@ -123,33 +121,41 @@
             text-decoration: none;
             font-size: 1.1rem;
             border: 2px solid #bfa35a;
-            padding: 0.7rem 1.5rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 6px;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            user-select: none;
         }
 
-        .back-link:hover {
+        a.back-link:hover,
+        a.back-link:focus {
             background-color: #e1c85a;
             color: #121212;
+            outline: none;
         }
 
-        footer {
-            background-color: #222;
+        footer.footer-note {
+            background-color: #1e1e1e;
             color: #bfa35a;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-family: 'Georgia', serif;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #bfa35a88;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
             text-align: center;
-            padding: 1.5rem 1rem;
-            margin-top: auto;
         }
 
-        footer p {
-            margin: 0.2rem 0;
+        footer.footer-note p {
+            margin: 0.3rem 0;
             font-weight: 600;
         }
 
-        /* Móvil */
         @media (max-width: 600px) {
+            .menu { flex-direction: column; gap: 1rem; text-align: center; }
             header h1 { font-size: 2rem; }
-            .menu { gap: 1rem; flex-direction: column; }
         }
     </style>
 </head>
@@ -161,8 +167,8 @@
     </header>
 
     <nav>
-        <ul class="menu" role="menubar">
-            <li class="menu-title">Información</li>
+        <ul class="menu" role="menubar" aria-label="Menú principal">
+            <p>Información</p>
             <li role="none"><a role="menuitem" href="edicionlimitada.html">Edición Limitada</a></li>
             <li role="none"><a role="menuitem" href="deportivo.html">Deportivo</a></li>
             <li role="none"><a role="menuitem" href="elegante.html">Elegante</a></li>
@@ -172,17 +178,35 @@
         </ul>
     </nav>
 
-    <main class="container">
-        <article class="content">
-            <h2>Reloj Edición Limitada</h2>
+    <div class="main-wrapper">
+        <div class="content">
+            <h1>Reloj Edición Limitada</h1>
             <p>
                 El reloj Edición Limitada Frederique Constant es un símbolo de exclusividad y sofisticación dentro del mundo de la alta relojería. Este reloj está diseñado para los amantes de los detalles finos y la artesanía tradicional, combinando un estilo clásico con innovaciones técnicas y materiales de alta calidad.
             </p>
             <p>
-                Inspirado en la elegancia de los yates de época, este modelo es ideal para coleccionistas y entusiastas que aprecian una fuerte conexión con la historia y la tradición náutica. Su producción limitada asegura que cada unidad sea especial,
+                Inspirado en la elegancia de los yates de época, este modelo es ideal para coleccionistas y entusiastas que aprecian una fuerte conexión con la historia y la tradición náutica. Su producción limitada asegura que cada unidad sea especial, ofreciendo además un sentido de distinción y singularidad que no se encuentra en colecciones masivas.
+            </p>
+            <p>
+                Este reloj está orientado a un público adulto, sofisticado y exigente, que valora tanto la precisión mecánica como el diseño atemporal. Es perfecto para ocasiones especiales, reuniones formales o para quienes desean expresar un gusto refinado en su estilo personal.
+            </p>
+            <p>
+                En resumen, el reloj Edición Limitada es mucho más que un instrumento para medir el tiempo, es una pieza especial que encarna elegancia, exclusividad y pasión por la artesanía relojera.
+            </p>
 
+            <a href="index.html" class="back-link">Volver a la tienda</a>
 
+            <footer class="footer-note" id="contacto">
+                <p><b>Dirección: P.º de la Castellana, 81</b></p>
+                <p><b>Teléfono: 921-123-563</b></p>
+                <p><b>Email: relojesmtm@info.com</b></p><br />
+                <p>&copy; 2026 Relojes MTM. Todos los derechos reservados.</p><br />
+            </footer>
+        </div>
+    </div>
 
+</body>
+</html>
 
 
 
