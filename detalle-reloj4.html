@@ -4,7 +4,7 @@
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/reloj.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Detalles del Reloj de Lujo</title>
+    <title>Detalles del Reloj de Lujo | MTM</title>
     <style>
         /* Reset de estilos */
         * {
@@ -12,18 +12,18 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Georgia', serif;
             background-color: #121212;
             color: #FAF3E0;
+            line-height: 1.6;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            padding: 2rem 1rem;
-            line-height: 1.6;
         }
-        /* Encabezado */
+
+        /* --- ENCABEZADO (IGUAL A PAGINA PRINCIPAL) --- */
         header {
             background: linear-gradient(90deg, #bfa35a, #8c732d);
             color: #121212;
@@ -31,9 +31,8 @@
             text-align: center;
             box-shadow: 0 4px 10px rgba(191, 163, 90, 0.5);
             width: 100%;
-            max-width: 1200px;
-            margin-bottom: 2rem;
         }
+
         header h1 {
             font-size: 3rem;
             font-weight: 700;
@@ -41,21 +40,22 @@
             margin-bottom: 0.3rem;
             font-family: 'Palatino Linotype', 'Book Antiqua', serif;
         }
+
         header p {
             font-size: 1.25rem;
             font-style: italic;
             font-weight: 400;
             color: #3b2e00;
         }
-        /* Menú de navegación */
+
+        /* --- MENÚ DE NAVEGACIÓN (IGUAL A PAGINA PRINCIPAL) --- */
         nav {
             background-color: #1e1e1e;
             padding: 1rem 0;
             box-shadow: inset 0 -2px 3px rgba(191, 163, 90, 0.3);
             width: 100%;
-            max-width: 1200px;
-            margin-bottom: 3rem;
         }
+
         .menu {
             list-style: none;
             display: flex;
@@ -65,6 +65,7 @@
             font-size: 1.1rem;
             font-family: 'Arial Black', Arial, sans-serif;
         }
+
         .menu p {
             color: #bfa35a;
             align-self: center;
@@ -74,6 +75,7 @@
             margin-right: 1rem;
             user-select: none;
         }
+
         .menu a {
             text-decoration: none;
             color: #FAF3E0;
@@ -81,13 +83,15 @@
             border-radius: 4px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
+
         .menu a:hover,
         .menu a:focus {
             background-color: #bfa35a;
             color: #121212;
             outline: none;
         }
-        /* Contenedor principal */
+
+        /* --- CONTENEDOR PRINCIPAL DEL PRODUCTO --- */
         .container {
             width: 90%;
             max-width: 800px;
@@ -97,11 +101,10 @@
             box-shadow: 0 0 20px #bfa35acc;
             padding: 2rem;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 3rem;
+            margin: 3rem auto;
+            flex-grow: 1; /* Para que el footer se mantenga abajo */
         }
+
         /* Estilos del carrusel */
         .carousel-container {
             position: relative;
@@ -114,19 +117,21 @@
             align-items: center;
             border-bottom: 2px solid #bfa35a;
             box-shadow: inset 0 -3px 6px #bfa35a88;
-            width: 100%;
         }
+
         .carousel-images {
             display: flex;
             transition: transform 0.5s ease;
             width: 100%;
         }
+
         .carousel-images img {
             width: 100%;
             border-radius: 10px;
             flex-shrink: 0;
             object-fit: cover;
         }
+
         /* Botones de navegación */
         .carousel-button {
             position: absolute;
@@ -140,42 +145,40 @@
             font-size: 24px;
             border-radius: 5px;
             z-index: 10;
-            user-select: none;
             transition: background-color 0.3s ease;
         }
-        .carousel-button:hover,
-        .carousel-button:focus {
+
+        .carousel-button:hover {
             background-color: #e1c85a;
-            outline: none;
         }
-        .carousel-button.left {
-            left: 10px;
-        }
-        .carousel-button.right {
-            right: 10px;
-        }
+
+        .carousel-button.left { left: 10px; }
+        .carousel-button.right { right: 10px; }
+
         /* Texto del producto */
         .product-title {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: #f5deb3;
             font-weight: 700;
             margin-bottom: 0.5rem;
             font-family: 'Palatino Linotype', 'Book Antiqua', serif;
         }
+
         .product-price {
             color: #bfa35a;
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             font-weight: 600;
             margin-bottom: 1rem;
             font-style: italic;
         }
+
         .product-description {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: #ddd6bb;
             margin-bottom: 1.5rem;
-            font-style: normal;
             text-align: justify;
         }
+
         .buy-button {
             display: inline-block;
             padding: 0.7rem 2rem;
@@ -187,83 +190,60 @@
             border-radius: 6px;
             box-shadow: 0 4px 6px rgba(191, 163, 90, 0.5);
             transition: background-color 0.4s ease, color 0.4s ease;
-            user-select: none;
             margin-bottom: 1rem;
         }
-        .buy-button:hover,
-        .buy-button:focus {
+
+        .buy-button:hover {
             background-color: #e1c85a;
-            color: #121212;
             box-shadow: 0 6px 10px rgba(225, 200, 90, 0.7);
-            outline: none;
         }
+
         .back-button {
+            display: block;
             color: #bfa35a;
             font-weight: 700;
             font-size: 1rem;
             text-decoration: none;
-            user-select: none;
             transition: color 0.3s ease;
         }
-        .back-button:hover,
-        .back-button:focus {
+
+        .back-button:hover {
             color: #e1c85a;
-            outline: none;
         }
-        /* Footer */
+
+        /* --- FOOTER (IGUAL A PAGINA PRINCIPAL) --- */
         footer {
             background-color: #222;
             color: #bfa35a;
             text-align: center;
-            padding: 1.2rem 1rem;
+            padding: 1.5rem 1rem;
             font-family: 'Georgia', serif;
             width: 100%;
-            max-width: 1200px;
         }
+
         footer p {
             font-size: 1rem;
             font-weight: 600;
             margin: 0.3rem 0;
         }
+
         /* Responsive */
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            .menu {
-                flex-direction: column;
-                gap: 1rem;
-                font-size: 1rem;
-            }
-            .container {
-                max-width: 100%;
-                padding: 1.5rem;
-            }
-            .product-title {
-                font-size: 1.25rem;
-            }
-            .product-price {
-                font-size: 1.1rem;
-            }
-            .buy-button {
-                font-size: 1rem;
-                padding: 0.6rem 1.5rem;
-            }
-            .carousel-container {
-                margin-bottom: 1rem;
-            }
+            header h1 { font-size: 2rem; }
+            .menu { flex-direction: column; gap: 1rem; }
+            .container { padding: 1.5rem; width: 95%; }
         }
     </style>
 </head>
 <body>
-    <!-- Encabezado -->
+
     <header>
         <h1>Relojes MTM</h1>
         <p>Encuentra el reloj perfecto para cada ocasión.</p>
     </header>
-    <!-- Menú de navegación -->
+
     <nav>
-        <ul class="menu" role="menubar" aria-label="Menú principal">
+        <ul class="menu" role="menubar">
             <p>Información</p>
             <li role="none"><a role="menuitem" href="edicionlimitada.html">Edición Limitada</a></li>
             <li role="none"><a role="menuitem" href="deportivo.html">Deportivo</a></li>
@@ -273,47 +253,49 @@
             <li role="none"><a role="menuitem" href="https://molavita.github.io/speed/">Prueba de velocidad</a></li>
         </ul>
     </nav>
-    <!-- Contenedor principal -->
-    <main class="container" role="main">
-        <!-- Detalles producto -->
+
+    <main class="container">
         <section aria-label="Detalles del Reloj de Lujo">
             <div class="carousel-container">
-                <div class="carousel-images" id="carouselImages" aria-label="Carrusel de imágenes del reloj">
-                    <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega1.png" alt="Imagen 1" />
-                    <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega2.png" alt="Imagen 2" />
-                    <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega3.png" alt="Imagen 3" />
-                    <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega5.png" alt="Imagen 5" />
-                    <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega6.png" alt="Imagen 6" />
-                    <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega7.png" alt="Imagen 7" />
+                <div class="carousel-images" id="carouselImages">
+                    <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega1.png" alt="Omega Speedmaster 1" />
+                    <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega2.png" alt="Omega Speedmaster 2" />
+                    <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega3.png" alt="Omega Speedmaster 3" />
+                    <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega5.png" alt="Omega Speedmaster 4" />
+                    <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega6.png" alt="Omega Speedmaster 5" />
+                    <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/omega7.png" alt="Omega Speedmaster 6" />
                 </div>
                 <button class="carousel-button left" onclick="moveSlide(-1)" aria-label="Anterior">❮</button>
                 <button class="carousel-button right" onclick="moveSlide(1)" aria-label="Siguiente">❯</button>
             </div>
+
             <h2 class="product-title">Reloj De Lujo</h2>
             <p class="product-price">15.800,00 €</p>
             <p class="product-description">
-                El Omega Speedmaster Dark Side of the Moon combina innovación y legado en un diseño audaz y contemporáneo. Su caja de 44.25 mm está elaborada completamente en cerámica negra, aportando una estética moderna y una resistencia excepcional. La esfera negra con detalles contrastantes y cristal de zafiro revela su carácter técnico y elegante. En su interior late el calibre automático Co-Axial 9300, con cronógrafo integrado y una reserva de marcha de 60 horas. Inspirado en el lado oculto de la Luna, este modelo rinde homenaje al espíritu pionero del Speedmaster original, ofreciendo una pieza sofisticada y distintiva para quienes buscan un reloj con historia y personalidad.
+                El Omega Speedmaster Dark Side of the Moon combina innovación y legado en un diseño audaz y contemporáneo. Su caja de 44.25 mm está elaborada completamente en cerámica negra, aportando una estética moderna y una resistencia excepcional. La esfera negra con detalles contrastantes y cristal de zafiro revela su carácter técnico y elegante. Inspirado en el lado oculto de la Luna, este modelo rinde homenaje al espíritu pionero del Speedmaster original.
             </p>
+            
             <a href="https://www.omegawatches.com/es-es/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-master-chronometer-chronograph-44-25-mm-31092445001001" class="buy-button" target="_blank" rel="noopener noreferrer">Comprar Ahora</a>
             <a href="index.html" class="back-button">Volver a la tienda</a>
         </section>
     </main>
-    <!-- Pie de página -->
+
     <footer>
-        <p><b>Dirección:</b> P.º de la Castellana, 81</p>
-        <p><b>Teléfono:</b> 921-123-563</p>
-        <p><b>Email:</b> relojesmtm@info.com</p><br />
-        <p>&copy; 2026 Relojes MTM. Todos los derechos reservados.</p><br />
+        <p><b>Dirección: P.º de la Castellana, 81</b></p>
+        <p><b>Teléfono: 921-123-563</b></p>
+        <p><b>Email: relojesmtm@info.com</b></p><br>
+        <p>&copy; 2026 Relojes MTM. Todos los derechos reservados.</p><br>
     </footer>
-<script>
-    let currentIndex = 0;
-    function moveSlide(direction) {
-        const images = document.getElementById('carouselImages');
-        const totalImages = images.children.length;
-        currentIndex = (currentIndex + direction + totalImages) % totalImages;
-        images.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-</script>
+
+    <script>
+        let currentIndex = 0;
+        function moveSlide(direction) {
+            const images = document.getElementById('carouselImages');
+            const totalImages = images.children.length;
+            currentIndex = (currentIndex + direction + totalImages) % totalImages;
+            images.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
 </body>
 </html>
 
