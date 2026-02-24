@@ -4,7 +4,7 @@
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/reloj.png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Detalles del Reloj Deportivo</title>
+    <title>Detalles del Reloj Deportivo | MTM</title>
     <style>
         /* Reset de estilos */
         * {
@@ -12,28 +12,26 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Georgia', serif;
             background-color: #121212;
             color: #FAF3E0;
+            line-height: 1.6;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            padding: 2rem 1rem;
-            line-height: 1.6;
         }
-        /* Encabezado */
+
+        /* --- ENCABEZADO (IGUAL A PAGINA PRINCIPAL) --- */
         header {
             background: linear-gradient(90deg, #bfa35a, #8c732d);
             color: #121212;
             padding: 2rem 1rem;
             text-align: center;
             box-shadow: 0 4px 10px rgba(191, 163, 90, 0.5);
-            width: 100%;
-            max-width: 1200px;
-            margin-bottom: 2rem;
         }
+
         header h1 {
             font-size: 3rem;
             font-weight: 700;
@@ -41,21 +39,21 @@
             margin-bottom: 0.3rem;
             font-family: 'Palatino Linotype', 'Book Antiqua', serif;
         }
+
         header p {
             font-size: 1.25rem;
             font-style: italic;
             font-weight: 400;
             color: #3b2e00;
         }
-        /* Menú de navegación */
+
+        /* --- MENÚ DE NAVEGACIÓN (IGUAL A PAGINA PRINCIPAL) --- */
         nav {
             background-color: #1e1e1e;
             padding: 1rem 0;
             box-shadow: inset 0 -2px 3px rgba(191, 163, 90, 0.3);
-            width: 100%;
-            max-width: 1200px;
-            margin-bottom: 3rem;
         }
+
         .menu {
             list-style: none;
             display: flex;
@@ -65,6 +63,7 @@
             font-size: 1.1rem;
             font-family: 'Arial Black', Arial, sans-serif;
         }
+
         .menu p {
             color: #bfa35a;
             align-self: center;
@@ -74,6 +73,7 @@
             margin-right: 1rem;
             user-select: none;
         }
+
         .menu a {
             text-decoration: none;
             color: #FAF3E0;
@@ -81,13 +81,15 @@
             border-radius: 4px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
+
         .menu a:hover,
         .menu a:focus {
             background-color: #bfa35a;
             color: #121212;
             outline: none;
         }
-        /* Contenedor principal */
+
+        /* --- CONTENEDOR ESPECÍFICO DEL PRODUCTO --- */
         .container {
             width: 90%;
             max-width: 800px;
@@ -97,11 +99,10 @@
             box-shadow: 0 0 20px #bfa35acc;
             padding: 2rem;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 3rem;
+            margin: 3rem auto;
+            flex-grow: 1;
         }
+
         /* Estilos del carrusel */
         .carousel-container {
             position: relative;
@@ -114,20 +115,22 @@
             align-items: center;
             border-bottom: 2px solid #bfa35a;
             box-shadow: inset 0 -3px 6px #bfa35a88;
-            width: 100%;
         }
+
         .carousel-images {
             display: flex;
             transition: transform 0.5s ease;
             width: 100%;
         }
+
         .carousel-images img {
             width: 100%;
             border-radius: 10px;
             flex-shrink: 0;
             object-fit: cover;
         }
-        /* Botones de navegación */
+
+        /* Botones carrusel */
         .carousel-button {
             position: absolute;
             top: 50%;
@@ -140,42 +143,37 @@
             font-size: 24px;
             border-radius: 5px;
             z-index: 10;
-            user-select: none;
             transition: background-color 0.3s ease;
         }
-        .carousel-button:hover,
-        .carousel-button:focus {
-            background-color: #e1c85a;
-            outline: none;
-        }
-        .carousel-button.left {
-            left: 10px;
-        }
-        .carousel-button.right {
-            right: 10px;
-        }
-        /* Texto del producto */
+
+        .carousel-button:hover { background-color: #e1c85a; }
+        .carousel-button.left { left: 10px; }
+        .carousel-button.right { right: 10px; }
+
+        /* Texto informativo */
         .product-title {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: #f5deb3;
             font-weight: 700;
             margin-bottom: 0.5rem;
             font-family: 'Palatino Linotype', 'Book Antiqua', serif;
         }
+
         .product-price {
             color: #bfa35a;
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             font-weight: 600;
             margin-bottom: 1rem;
             font-style: italic;
         }
+
         .product-description {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: #ddd6bb;
             margin-bottom: 1.5rem;
-            font-style: normal;
             text-align: justify;
         }
+
         .buy-button {
             display: inline-block;
             padding: 0.7rem 2rem;
@@ -187,83 +185,57 @@
             border-radius: 6px;
             box-shadow: 0 4px 6px rgba(191, 163, 90, 0.5);
             transition: background-color 0.4s ease, color 0.4s ease;
-            user-select: none;
             margin-bottom: 1rem;
         }
-        .buy-button:hover,
-        .buy-button:focus {
+
+        .buy-button:hover {
             background-color: #e1c85a;
-            color: #121212;
             box-shadow: 0 6px 10px rgba(225, 200, 90, 0.7);
-            outline: none;
         }
+
         .back-button {
+            display: block;
             color: #bfa35a;
             font-weight: 700;
             font-size: 1rem;
             text-decoration: none;
-            user-select: none;
             transition: color 0.3s ease;
         }
-        .back-button:hover,
-        .back-button:focus {
-            color: #e1c85a;
-            outline: none;
-        }
-        /* Footer */
+
+        .back-button:hover { color: #e1c85a; }
+
+        /* --- FOOTER (IGUAL A PAGINA PRINCIPAL) --- */
         footer {
             background-color: #222;
             color: #bfa35a;
             text-align: center;
-            padding: 1.2rem 1rem;
+            padding: 1.5rem 1rem;
             font-family: 'Georgia', serif;
-            width: 100%;
-            max-width: 1200px;
         }
+
         footer p {
             font-size: 1rem;
             font-weight: 600;
             margin: 0.3rem 0;
         }
+
         /* Responsive */
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            .menu {
-                flex-direction: column;
-                gap: 1rem;
-                font-size: 1rem;
-            }
-            .container {
-                max-width: 100%;
-                padding: 1.5rem;
-            }
-            .product-title {
-                font-size: 1.25rem;
-            }
-            .product-price {
-                font-size: 1.1rem;
-            }
-            .buy-button {
-                font-size: 1rem;
-                padding: 0.6rem 1.5rem;
-            }
-            .carousel-container {
-                margin-bottom: 1rem;
-            }
+            header h1 { font-size: 2rem; }
+            .menu { flex-direction: column; gap: 1rem; }
+            .container { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Encabezado -->
+
     <header>
         <h1>Relojes MTM</h1>
         <p>Encuentra el reloj perfecto para cada ocasión.</p>
     </header>
-    <!-- Menú de navegación -->
+
     <nav>
-        <ul class="menu" role="menubar" aria-label="Menú principal">
+        <ul class="menu" role="menubar">
             <p>Información</p>
             <li role="none"><a role="menuitem" href="edicionlimitada.html">Edición Limitada</a></li>
             <li role="none"><a role="menuitem" href="deportivo.html">Deportivo</a></li>
@@ -273,12 +245,11 @@
             <li role="none"><a role="menuitem" href="https://molavita.github.io/speed/">Prueba de velocidad</a></li>
         </ul>
     </nav>
-    <!-- Contenedor principal -->
-    <main class="container" role="main">
-        <!-- Detalles producto -->
+
+    <main class="container">
         <section aria-label="Detalles del Reloj Deportivo">
             <div class="carousel-container">
-                <div class="carousel-images" id="carouselImages" aria-label="Carrusel de imágenes del reloj">
+                <div class="carousel-images" id="carouselImages">
                     <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/tag-heuer-5.png" alt="Imagen 1" />
                     <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/tag-heuer.png" alt="Imagen 2" />
                     <img src="https://raw.githubusercontent.com/molavita/molavita.github.io/refs/heads/main/imagenes/tag-heuer-2.png" alt="Imagen 3" />
@@ -288,31 +259,33 @@
                 <button class="carousel-button left" onclick="moveSlide(-1)" aria-label="Anterior">❮</button>
                 <button class="carousel-button right" onclick="moveSlide(1)" aria-label="Siguiente">❯</button>
             </div>
+
             <h2 class="product-title">Reloj Deportivo</h2>
             <p class="product-price">10.900,00 €</p>
-            <p class="product-description">El TAG Heuer Monaco Chronograph es una edición moderna y llamativa del icónico modelo Monaco. Este reloj se distingue por su caja cuadrada de titanio de grado 2 con un acabado arenado y oscuro, que le da un aspecto robusto y contemporáneo. La esfera es en parte abierta dejando asi ver el mecanismo con subesferas azules, aportando un contraste elegante y deportivo. Está equipado con el calibre Heuer 02 automático, que ofrece una reserva de marcha de aproximadamente 80 horas. Su correa de caucho perforado y la resistencia al agua de 100 metros lo convierten en un reloj versátil y apto tanto para el uso diario como para ocasiones especiales.</p>
+            <p class="product-description">
+                El TAG Heuer Monaco Chronograph es una edición moderna y llamativa del icónico modelo Monaco. Este reloj se distingue por su caja cuadrada de titanio de grado 2 con un acabado arenado y oscuro, que le da un aspecto robusto y contemporáneo. La esfera es en parte abierta dejando así ver el mecanismo con subesferas azules, aportando un contraste elegante y deportivo.
+            </p>
+            
             <a href="https://www.tagheuer.com/es/es/relojes/colecciones/tag-heuer-monaco/39-mm-calibre-heuer-02-autom%C3%A1tico/CBL2182.FT6235.html" class="buy-button" target="_blank" rel="noopener noreferrer">Comprar Ahora</a>
             <a href="index.html" class="back-button">Volver a la tienda</a>
         </section>
     </main>
-    <!-- Pie de página -->
-    <footer>
-        <p><b>Dirección:</b> P.º de la Castellana, 81</p>
-        <p><b>Teléfono:</b> 921-123-563</p>
-        <p><b>Email:</b> relojesmtm@info.com</p><br />
-        <p>&copy; 2026 Relojes MTM. Todos los derechos reservados.</p><br />
-    </footer>
-<script>
-    let currentIndex = 0;
-    function moveSlide(direction) {
-        const images = document.getElementById('carouselImages');
-        const totalImages = images.children.length;
-        currentIndex = (currentIndex + direction + totalImages) % totalImages;
-        images.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-</script>
-</body>
-</html>
 
+    <footer>
+        <p><b>Dirección: P.º de la Castellana, 81</b></p>
+        <p><b>Teléfono: 921-123-563</b></p>
+        <p><b>Email: relojesmtm@info.com</b></p><br>
+        <p>&copy; 2026 Relojes MTM. Todos los derechos reservados.</p><br>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        function moveSlide(direction) {
+            const images = document.getElementById('carouselImages');
+            const totalImages = images.children.length;
+            currentIndex = (currentIndex + direction + totalImages) % totalImages;
+            images.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
 </body>
 </html>
